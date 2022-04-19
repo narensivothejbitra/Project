@@ -1,0 +1,96 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+        body {
+            background-image: url(blog_img.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+        <div>
+                <nav class="navbar navbar-expand-lg  navbar-dark bg-primary">
+                    <a class="navbar-brand" href="#">Note Taking App</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                          <a class="nav-link" href="index.html">App <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="login.html">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="register.html">Register</a>
+                        </li>
+                          
+                      </ul>
+                     
+                    </div>
+                  </nav>
+        </div>
+    <div id="container-login">
+        <div id="title">
+            <i class="material-icons lock">lock</i> Login
+        </div>
+
+        <form>
+            <div class="input">
+                <div class="input-addon">
+                    <i class="material-icons">face</i>
+                </div>
+                <input id="username" placeholder="Username" type="text" required class="validate" autocomplete="off">
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="input">
+                <div class="input-addon">
+                    <i class="material-icons">vpn_key</i>
+                </div>
+                <input id="password" placeholder="Password" type="password" required class="validate" autocomplete="off">
+            </div>
+
+            <div class="remember-me">
+                
+            </div>
+
+            <input type="submit" value="Log In" />
+        </form>
+
+        <div class="forgot-password">
+            <a href="#">Forgot your password?</a>
+        </div>
+       
+
+        <div class="register">
+            Don't have an account yet?
+            <a href="register.html"><button id="register-link">Register here</button></a>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var url = window.location;
+            $('ul.nav a[href="'+ url +'"]').parent().addClass('active');
+            $('ul.nav a').filter(function() {
+                 return this.href == url;
+            }).parent().addClass('active');
+        });
+    </script> 
+</body>
+
+</html>
